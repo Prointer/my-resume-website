@@ -1,34 +1,29 @@
 import React from 'react'
-import './App.css'
 import Header from './Header'
+import MainPage from './MainPage'
 import ScrollToTopButton from './ScrollToTopButton'
-function App() {
+import './styles.css'
 
+function App() {
   return (
-    
     <>
-    <div>
-      <Header /> 
-      <main>
-        <section id="home" style={{padding:"100px 20px", minHeight:"100vh"}}>
-          <h1> Welcome to My Resume Website </h1>
+      <Header />
+      <main style={{ paddingTop: '60px' }}>
+        <section id="home" className="section">
+          <MainPage />
         </section>
-        <section id="about" style={{ padding: '100px 20px', minHeight: '100vh' }}>
+        <section id="about" className="section">
           <h2>About Me</h2>
           <p>Some information about myself.</p>
         </section>
-        <section id="projects" style={{ padding: '100px 20px', minHeight: '100vh' }}>
-          <h2>My Projects</h2>
-        </section>
-        <section id="contact" style={{ padding: '100px 20px', minHeight: '100vh' }}>
-          <h2>Contact Me</h2>
+        <section id="projects" className="section">
+          <h2>Projects</h2>
+          <p>Details about my projects.</p>
         </section>
       </main>
       <ScrollToTopButton />
-      
-    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+/* Основные стили */
+.main-page {
+  display: flex;
+  height: 100vh;
+  background-color: #101116; /* Цвет фона всего сайта */
+  color: #fff; /* Цвет текста */
+}
+
+/* Левая секция */
+.left-section, .right-section {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #2F3148; /* Цвет фона для левой и правой секции */
+}
+
+.left-section h1 {
+  font-size: 42px;
+  margin-bottom: 60px;
+  font-family: 'Source Code Pro', Inter, sans-serif; /* Используем шрифт только для имени */
+
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #8689AC; /* Цвет ссылок */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.contact-button {
+  background-color: #8689AC; /* Цвет фона неактивных кнопок */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #3F5576; /* Цвет фона при наведении */
+  transform: scale(1.1);
+}
+
+/* Центральная секция */
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2F3148; /* Цвет фона для центральной секции */
+}
+
+.profile-photo {
+  width: 70%;
+  border-radius: 10px; /* Округленные края */
+  border: 5px solid #8689AC; /* Цвет рамки */
+}
+
+.right-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.right-section h3 {
+  font-size: 18px;
+  color: #8689AC; /* Цвет заголовка */
+  margin-bottom: 5px;
+}
+
+.right-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.learn-more {
+  background-color: #8689AC; /* Цвет фона неактивных кнопок */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #3F5576; /* Цвет фона при наведении */
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .main-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .left-section, .right-section {
+    align-items: center;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 50%;
+  }
+}

@@ -1,32 +1,30 @@
 import React from 'react'
+import HeaderLogo from './assets/header_logo_2.svg'
+import './styles.css'
 
 const Header = () => {
-	return(
-		<header style={styles.header}>
-			<nav style={styles.nav}>
-				<a href="#home" style={styles.link}>Home</a>
-        <a href="#about" style={styles.link}>About</a>
-        <a href="#projects" style={styles.link}>Projects</a>
-        <a href="#contact" style={styles.link}>Contact</a>
-			</nav>
-		</header>
-	)
-}
-const styles ={
-	header:{
-		backgroundColor: "#282c34",
-		padding:'10px 20px',
-		margin:0,
-	},
-	nav:{
-		display:'flex',
-		justifyContent:'space-around'
-	},
-	link:{
-		color:"white",
-		textDecoration:'none',
-		fontSize:'18px'
-	}
-	
+  return (
+    <header>
+      <img src={HeaderLogo} alt='logo' className='header_logo'/>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="social_links__header">
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+    </header>
+  );
 };
+
 export default Header;
